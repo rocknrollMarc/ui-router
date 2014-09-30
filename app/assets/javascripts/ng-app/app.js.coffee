@@ -12,6 +12,22 @@ angular.module("myApp", [
     templateUrl: "home.html"
     controller: "HomeCtrl"
 
+    .state "dashboard",
+      abstract: true
+      templateUrl: 'dashboard/layout.html'
+
+    .state "dashboard.one",
+      url: '/'
+      templateUrl: 'dashboard/one.html'
+
+    .state "dasboard.two",
+      url: '/two'
+      templateUrl: 'dashboard/two.html'
+
+    .state "dashboard.three",
+      url: '/three'
+      templateUrl: 'dashboard/three.html'
+
   
   # default fall back route
   $urlRouterProvider.otherwise "/"
